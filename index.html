@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="he">
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title> נפלת בפישינג! </title>
+        <link rel="icon" href="https://www.wake-up.co.il/wp-content/uploads/2023/04/SMALL-LOGO-1.png" type="image/png">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <style>
+            body {
+                background-color: rgb(237, 216, 255);
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+                text-align:center; 
+                color:lightskyblue;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                font-size:60px;
+                color:rgb(123, 61, 194);
+                direction: rtl;
+            }
+
+            p {
+                color:rgb(123, 61, 194);
+                font-size:175%;
+                direction: rtl;
+            }
+
+            div {
+                border: 2px solid rgb(123, 61, 194);
+                padding: 30px;
+                font-size: 30px;
+                margin: 50px;
+                direction: rtl;
+            }
+
+            /* hr {
+                border: 0.5px solid rgb(120, 175, 233);
+            } */
+
+            .suspicious-signs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .sign {
+                background-color: white;
+                border: 2px solid rgb(177, 125, 236);
+                margin: 10px;
+                padding: 20px;
+                width: 30%;
+                text-align: center;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .sign:hover {
+                transform: scale(1.1); 
+            }
+
+            .sign img {
+                max-width: 130px;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .sign h3 {
+                font-size: 18px;
+                color: #333;
+                margin-top: 10px;
+            }
+
+            .sign p {
+                font-size: 14px;
+                color: #555;
+                margin-top: 5px;
+                direction: rtl;
+                text-align: justify;
+            }
+
+            @media only screen and (max-width: 768px) { .sign {
+                width: 45%; 
+                }
+            }
+
+            @media only screen and (max-width: 600px) { .sign {
+                width: 90%; 
+                }
+            }
+
+            .open-button {
+                background-color: rgb(123, 61, 194);
+                color: aliceblue;
+                padding: 15px 32px;
+                font-size: 16px;
+                border: 1px;
+                cursor: pointer;
+                border-radius: 5%;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            }
+
+            .open-button:hover {
+                transform: scale(1.1); 
+            }
+            .popup {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                top: 50%;
+                left: 47%;
+                width: 70%;
+                height: auto;
+                overflow: auto;
+                background-color: #ffffff;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                border: solid rgb(123, 61, 194) 2px;
+                border-radius: 5px;
+            }
+            .popup-content {
+                border: none;
+            }
+
+            .popup-content p {
+                color: #333333;
+                text-align: justify;
+                direction:rtl;
+                font-size:25px;
+
+            }
+
+            .close-button {
+                background-color: rgb(123, 61, 194);
+                color: white;
+                padding: 15px 32px;
+                border: 1px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            }
+
+            .close-button:hover {
+                transform: scale(1.1); 
+            }
+
+            
+            @media only screen and (max-width: 768px) { .popup {
+                width: 80%;
+                max-width: 100%; 
+                }
+            }
+
+            @media only screen and (max-width: 600px) { .popup {
+                width: 95%; 
+                max-width: 100%;
+                }
+            }
+
+        </style>
+
+        <script>
+            function openPopup(){
+                document.getElementById("popup").style.display = "block";
+            }
+
+            function closePopup(){
+                document.getElementById("popup").style.display = "none";
+            }
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <img src="https://www.wake-up.co.il/wp-content/uploads/2023/04/SMALL-LOGO-1.png" style="width:110px;height:75px;margin-top: 1%; margin-top: 3%;" alt="logo">
+
+        <h1> נפלת בפישינג! </h1>
+        <p>אל תיתן להאקרים להפתיע אותך. <br> הנה <b> ששת הסממנים </b> שיעזרו לך לזהות להבא.</p>
+        
+        <!-- <hr> -->
+
+        <div class="suspicious-signs">
+            <div class="sign">
+                <img src="https://i.imgur.com/mDn5n2e.png" alt="קישורים חשודים"> 
+                <h3>קישורים חשודים ולא ברורים</h3>
+                <p>במידה ונתקלתם בקישורים שמכילים צירוף אותיות אקראיות, דומים לאתרים מוכרים אך עם שגיאות כתיב, או לא תואמים לתוכן של האתר - <b> יש להימנע מללחוץ עליהם.</b></p>
+            </div>
+            <div class="sign">
+                <img src="https://i.imgur.com/2UCdbFe.png" alt="מידע אישי"> 
+                <h3>בקשה למידע אישי</h3>
+                <p>אם נתקלתם באתרים, הודעות או מיילים המבקשים מידע אישי כמו סיסמאות, מספרי כרטיסי אשראי או פרטים רגישים אחרים דרך קישורים או הודעות - <b> אל תשתפו את המידע, אתר אמין לא ידרוש ממך פרטים אישיים באופן כזה. </b></p>
+            </div>
+            <div class="sign">
+                <img src="https://i.imgur.com/0AAxbLH.png" alt="נוסח חובבני"> 
+                <h3>נוסח חובבני</h3>
+                <p>שגיאות כתיב וניסוח לקוי יכולים להעיד על התחזות. לרוב, ארגונים רשמיים לא שולחים הודעות עם שגיאות וטעויות - <b> יש למחוק את ההודעה ולחסום את המספר או את כתובת השולח. </b></p>
+            </div>
+            <div class="sign">
+                <img src="https://i.imgur.com/Vi3sHD0.png" alt="יצירת לחץ"> 
+                <h3>יצירת לחץ ותחושת דחיפות</h3>
+                <p>אתרים או הודעות שמטילים לחץ על המשתמשים, כגון איום בחסימתו של חשבון או דרישה לפעולה מיידית, עשויים להעיד על ניסיון להפעיל מניפולציה ולהדחיק את המשתמש לבצע פעולה בחפזון - <b> יש להפעיל שיקול דעת לפני כל פעולה.</b></p>
+            </div>
+            <div class="sign">
+                <img src="https://i.imgur.com/iVGnium.png" alt="היעדר פניה אישית"> 
+                <h3>היעדר פניה אישית</h3>
+                <p>ארגונים רשמיים נוהגים לפנות ללקוחותיהם בשמם הפרטי. אם ההודעה או האתר פונים באופן כללי כמו "לקוח יקר", זה עשוי להעיד על כך שמדובר בהודעה אוטומטית או לא אמינה - <b> יש לנקוט בזהירות. </b></p>
+            </div>
+            <div class="sign">
+                <img src="https://i.imgur.com/bnVc19r.png" alt="הבטחות מוגזמות"> 
+                <h3>הבטחות מוגזמות</h3>
+                <p>הודעות המציעות הבטחות לא מציאותיות, הצעות לפרסים או הצהרות בלתי סבירות כמו "הכפל את כספך תוך יום", בדרך כלל חשודות ומזויפות. <b> יש להימנע מלהגיב להן. </b></p>
+            </div>
+        </div>
+
+        <button class="open-button" onclick="openPopup()">למד עוד</button>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p style="direction: rtl; text-align: center;color: #333333;font-size:50px;"> <b> הונאות פישינג</b></p>
+                    <p>
+                        <b>פישינג</b> הוא סוג של <b>התקפה מקוונת</b> שבה תוקפים מנסים להשיג <b>מידע רגיש, כמו סיסמאות ומידע אישי</b>, על ידי <b>שליחת הודעות דוא"ל או יצירת אתרים מזויפים שמדמים מקורות אמינים</b>. התקפות אלה לא פוגעות רק בפרט, אלא עשויות לגרום ל<b>נזק משמעותי</b> גם לחברות. כאשר עובדים נופלים בפח ומזינים את פרטי החשבון שלהם, התוקפים יכולים להיכנס לרשתות החברה, לגנוב מידע חשוב, להתקין נוזקות ולשבש את המערכות. <b>נזק כזה יכול לפגוע במוניטין החברה, לגרום לאובדן אמון מצד הלקוחות ולהוביל לתביעות וקנסות בעקבות הפרות רגולציה</b>.
+                    </p>
+                                
+                <button class="close-button" onclick="closePopup()">סגור</button> 
+            </div>
+        </div>
+
+        <p><br></p>
+    </body>
+
+</html>
